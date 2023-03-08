@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Exit");
+                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week \n6.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -38,6 +38,16 @@ namespace LogicalPrograms
                         reverse.Reverse(a);
                         break;
                     case 5:
+                        Console.WriteLine("Enter date");
+                        int date = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter month");
+                        int month = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter year");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        DayOfWeek dayOfWeek = new DayOfWeek();
+                        dayOfWeek.Day(date,month,year);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
