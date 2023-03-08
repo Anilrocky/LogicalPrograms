@@ -5,19 +5,20 @@ namespace LogicalPrograms
     {
         public void IsPrime(int num)
         {
+            int flag = 0;
             for (int i = 2; i < num; i++)
             {
                 if (num % i == 0)
                 {
-                    Console.WriteLine("{0} is not prime", num);
+                    flag = 0;
                     break;
-                }                    
-                else
-                {
-                    Console.WriteLine("{0} is prime", num);
-                    break;
-                }                    
+                }                   
+                    flag = 1;                    
             }
+            if (flag == 0)
+                Console.WriteLine(num + " is not Prime");
+            else
+                Console.WriteLine(num + " is Prime");
         }
     }
 }
