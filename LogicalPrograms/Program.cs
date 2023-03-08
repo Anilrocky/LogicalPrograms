@@ -9,7 +9,8 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week \n6.Exit");
+                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week"+ 
+                    "\n6.Temperature Conversion \n7.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -48,6 +49,14 @@ namespace LogicalPrograms
                         dayOfWeek.Day(date,month,year);
                         break;
                     case 6:
+                        Console.WriteLine("Enter Temperature");
+                        int temp = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Choose option to perform \n1.Celcius to Fahrenheit   2.Fahrenheit to Celcius");
+                        int opt = Convert.ToInt32(Console.ReadLine());
+                        TemperatureConversion t = new TemperatureConversion();
+                        t.TempConv(temp, opt);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
