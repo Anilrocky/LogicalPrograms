@@ -9,7 +9,7 @@ namespace LogicalPrograms
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Exit");
+                Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -26,6 +26,12 @@ namespace LogicalPrograms
                         perfectNumber.PerfectNum(num);
                         break;
                     case 3:
+                        Console.WriteLine("Enter number");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        PrimeNumber primeNumber = new PrimeNumber();
+                        primeNumber.IsPrime(n);
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
