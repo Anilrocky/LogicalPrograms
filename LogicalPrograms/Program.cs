@@ -10,7 +10,7 @@ namespace LogicalPrograms
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week"+ 
-                    "\n6.Temperature Conversion \n7.Monthly Payment \n8.Exit");
+                    "\n6.Temperature Conversion \n7.Monthly Payment \n8.Coupon Numbers \n9.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -67,6 +67,12 @@ namespace LogicalPrograms
                         monthlyPayment.Payment(P,Y,R);
                         break;
                     case 8:
+                        Console.WriteLine("Enter number");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        CouponNumbers couponNumbers = new CouponNumbers();
+                        couponNumbers.DistinctCoupon(b);
+                        break;
+                    case 9:
                         flag = false;
                         break;
                 }
