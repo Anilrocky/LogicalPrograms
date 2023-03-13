@@ -10,7 +10,7 @@ namespace LogicalPrograms
             while (flag)
             {
                 Console.WriteLine("Choose an option to execute \n1.Fibonacci Series \n2.Perfect Number \n3.Prime Number \n4.Reverse a Number \n5.Day of Week"+ 
-                    "\n6.Temperature Conversion \n7.Monthly Payment \n8.Coupon Numbers \n9.Stop Watch \n10.Vending Machine \n11.Exit");
+                    "\n6.Temperature Conversion \n7.Monthly Payment \n8.Coupon Numbers \n9.Stop Watch \n10.Vending Machine \n11.Square Root \n12.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -83,6 +83,10 @@ namespace LogicalPrograms
                         vendingMachine.GetChange(amount);
                         break;
                     case 11:
+                        SquareRoot squareRoot = new SquareRoot();
+                        squareRoot.Sqrt();
+                        break;
+                    case 12:
                         flag = false;
                         break;
                 }
